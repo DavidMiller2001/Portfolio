@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
+import Navbar from "~/components/ui/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,7 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>{children}</body>
+      <body
+        className={`font-sans ${inter.variable} flex justify-center bg-slate-800 text-white`}
+      >
+        <div className="w-full max-w-7xl ">
+          <Navbar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
