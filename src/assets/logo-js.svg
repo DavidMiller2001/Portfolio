@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-labelledby="jsTitle">
+  <title id="jsTitle">JavaScript logo</title>
+  <rect width="128" height="128" rx="16" fill="#F7DF1E" />
+  <text x="50%" y="62%" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="64" text-anchor="middle" fill="#000">JS</text>
+</svg>
