@@ -216,6 +216,17 @@ a {
   box-shadow: 0 1rem 2.5rem rgba(72, 29, 124, 0.18);
 }
 
+.profile-portrait {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  background-image: url('/src/assets/portrait.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: red;
+}
+
 .button-primary,
 .button-secondary {
   border-radius: 999px;
@@ -290,4 +301,8 @@ a {
 
 .container {
   @apply mx-auto w-full max-w-5xl;
+}
+
+.subheading {
+  @apply mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-(--color-indigo-bloom-600);
 }

@@ -1,16 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import placeholder from '../assets/placeholder.svg';
 
 const projects = [
   {
     title: 'Finance Dashboard',
     description:
-      'A personal finance app for tracking transactions, viewing charts, and managing spending data.',
-    tags: ['React', 'TanStack Start', 'Drizzle', 'SQLite'],
-    liveHref: '#',
-    repoHref: 'https://github.com/your-username/finance-dashboard',
-    image: placeholder,
+      'A personal finance app for tracking transactions, viewing charts, and managing spending data. Built with Tanstack start, shadcn-ui, and supabase.',
+    tags: ['React', 'TanStack Start', 'Drizzle', 'Supabase'],
+    liveHref: 'https://budget-tracker.david-miller.blog',
+    repoHref: 'https://github.com/DavidMiller2001/Budget-Tracker',
+    image: '/src/assets/budget-tracker-image.png',
   },
   {
     title: 'Ray Tracer',
@@ -19,120 +18,155 @@ const projects = [
     tags: ['JavaScript', 'Canvas', 'Graphics'],
     liveHref: '#',
     repoHref: 'https://github.com/your-username/ray-tracer',
-    image: placeholder,
+    image: '/src/assets/ray-tracer-image.png',
   },
   {
     title: 'Motivation App',
     description:
-      'A web app focused on daily motivation, goal tracking, and productivity.',
-    tags: ['Astro', 'TypeScript', 'CSS'],
-    liveHref: '#',
-    repoHref: 'https://github.com/your-username/motivation-app',
-    image: placeholder,
+      'A simple web app that makes renders motivational quotes from various sources. Built using Tanstack start ',
+    tags: ['React', 'Tanstack', 'API'],
+    liveHref: 'https://motivation.david-miller.blog',
+    repoHref: 'https://github.com/DavidMiller2001/Quote-Generator',
+    image: '/src/assets/motivation-image.png',
   },
 ];
 ---
 
 <Layout>
-
   <main>
-    <section class="flex  flex-col items-center justify-center gap-6 text-center container">
-      <!-- Replace this div with an img later -->
-      <div class="profile-placeholder">
-        DM
-      </div>
+    <section
+      class='flex flex-col items-center justify-center gap-6 text-center container'
+    >
+      <div class='profile-portrait'></div>
 
-      <div class="max-w-2xl">
-        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-(--color-indigo-bloom-600)">
-          Front-end Developer
-        </p>
+      <div class='max-w-2xl'>
+        <h3 class='subheading'>Front-end Developer</h3>
 
-        <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
-          Building polished web experiences with React.
+        <h1 class='text-4xl font-bold tracking-tight sm:text-5xl'>
+          Creating web designs that you can be proud of.
         </h1>
 
-        <p class="mx-auto mt-5 max-w-xl text-lg text-(--color-wisteria-800)">
-          I am a front-end web developer based in Mount Pleasant, Michigan, who is always excited to learn and gain new experiences. I have experience in many web technologies, from 2019 - Present. 
+        <p
+          class='mx-auto mt-5 text-center max-w-xl text-lg text-(--color-wisteria-800)'
+        >
+          I&apos;m a front-end developer specializing in TypeScript and
+          HTML/CSS, backed by hands-on experience with Go and Java.
         </p>
 
+        <section class='p-8'>
+          <h3 class='subheading text-center'>Skills</h3>
 
-    </section>
-
-
-        <div class="p-8 flex flex-wrap items-center justify-center gap-3">
-          <div>
-            <img src={`/src/assets/logo-html.svg`} alt="HTML" class="w-10" />
-            <span class="sr-only">HTML</span>
-          </div>
-
-          <div>
-            <img src={`/src/assets/logo-css.svg`} alt="CSS" class="w-10" />
-            <span class="sr-only">CSS</span>
-          </div>
-
-          <div >
-            <img src={`/src/assets/logo-ts.svg`} alt="TypeScript" class="w-10" />
-            <span class="sr-only">TS / JS</span>
-          </div>
-
-          <div >
-            <img src={`/src/assets/logo-react.svg`} alt="React" class="w-10" />
-            <span class="sr-only">React</span>
-          </div>
-
-					<div >
-						<img src={`/src/assets/logo-tanstack.svg`} alt="TanStack" class="w-10" />
-						<span class="sr-only">TanStack</span>
-					</div>
-
-          <div>
-            <img src="/src/assets/astro.svg" alt="Astro" class="h-10" />
-            <span class="sr-only">Astro</span>
-          </div>
-
-          <div >
-            <img src={`/src/assets/logo-nextjs.svg`} alt="Next.js" class="w-10" />
-            <span class="sr-only">Next.js</span>
-          </div>
-
-        </div>
-      </div>
-
-    <section id="projects" class="w-full">
-			<div class='container'>
-
-       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <article class="project-card">
-						<div>
-            <img src='/src/assets/placeholder.svg' alt={`${project.title} screenshot`} class="w-full h-40 object-cover rounded-md mb-4" />
-
-            <h3 class="text-xl font-semibold">{project.title}</h3>
-
-            <p class="mt-3 text-sm leading-6 text-(--color-wisteria-800)">
-              {project.description}
-            </p>
-
-            <ul class="mt-5 flex flex-wrap gap-2">
-              {project.tags.map((tag) => (
-                <li class="project-tag">{tag}</li>
-              ))}
-            </ul>
-						</div>
-
-            <div class="mt-6 flex gap-3">
-              {project.liveHref && (
-                <a href={project.liveHref} class="button-primary flex-1 text-center" target="_blank" rel="noopener">Live demo</a>
-              )}
-
-              {project.repoHref && (
-                <a href={project.repoHref} class="button-secondary flex-1 text-center" target="_blank" rel="noopener">Source Code</a>
-              )}
+          <div class='flex flex-wrap items-center justify-center gap-3'>
+            <div>
+              <img src={`/src/assets/logo-html.svg`} alt='HTML' class='w-10' />
+              <span class='sr-only'>HTML</span>
             </div>
-          </article>
-        ))}
+
+            <div>
+              <img src={`/src/assets/logo-css.svg`} alt='CSS' class='w-10' />
+              <span class='sr-only'>CSS</span>
+            </div>
+
+            <div>
+              <img
+                src={`/src/assets/logo-ts.svg`}
+                alt='TypeScript'
+                class='w-10'
+              />
+              <span class='sr-only'>TS / JS</span>
+            </div>
+
+            <div>
+              <img
+                src={`/src/assets/logo-react.svg`}
+                alt='React'
+                class='w-10'
+              />
+              <span class='sr-only'>React</span>
+            </div>
+
+            <div>
+              <img
+                src={`/src/assets/logo-tanstack.svg`}
+                alt='TanStack'
+                class='w-10'
+              />
+              <span class='sr-only'>TanStack</span>
+            </div>
+
+            <div>
+              <img src='/src/assets/astro.svg' alt='Astro' class='h-10' />
+              <span class='sr-only'>Astro</span>
+            </div>
+
+            <div>
+              <img
+                src={`/src/assets/logo-nextjs.svg`}
+                alt='Next.js'
+                class='w-10'
+              />
+              <span class='sr-only'>Next.js</span>
+            </div>
+          </div>
+        </section>
       </div>
-			</div>
+
+      <section id='projects' class='w-full'>
+        <h3 class='subheading text-center'>Projects</h3>
+        <div class='container'>
+          <div class='p-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
+            {
+              projects.map((project) => (
+                <article class='project-card'>
+                  <div>
+                    <img
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      class='w-full h-40 object-cover rounded-md mb-4'
+                    />
+
+                    <h3 class='text-xl font-semibold'>{project.title}</h3>
+
+                    <p class='mt-3 text-sm leading-6 text-(--color-wisteria-800)'>
+                      {project.description}
+                    </p>
+
+                    <ul class='mt-5 flex flex-wrap gap-2'>
+                      {project.tags.map((tag) => (
+                        <li class='project-tag'>{tag}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div class='mt-6 flex gap-3'>
+                    {project.liveHref && (
+                      <a
+                        href={project.liveHref}
+                        class='button-primary flex-1 text-center'
+                        target='_blank'
+                        rel='noopener'
+                      >
+                        Live demo
+                      </a>
+                    )}
+
+                    {project.repoHref && (
+                      <a
+                        href={project.repoHref}
+                        class='button-secondary flex-1 text-center'
+                        target='_blank'
+                        rel='noopener'
+                      >
+                        Source Code
+                      </a>
+                    )}
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
     </section>
   </main>
 </Layout>
