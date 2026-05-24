@@ -220,7 +220,7 @@ a {
   width: 6.5rem;
   height: 6.5rem;
   border-radius: 50%;
-  background-image: url('/src/assets/portrait.jpg');
+  background-image: url('/assets/portrait.jpg');
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
